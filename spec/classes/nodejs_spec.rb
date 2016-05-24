@@ -137,8 +137,15 @@ describe 'nodejs', type: :class do
             default_params.merge!(repo_enable_src: true,)
           end
 
+<<<<<<< HEAD
           it 'the repo apt::source resource should contain include => { src => true}' do
             is_expected.to contain_apt__source('nodesource').with('include' => { 'src' => true, },)
+=======
+          it 'the repo apt::source resource should contain include_src = true' do
+            should contain_apt__source('nodesource').with({
+              'include_src' => true,
+            })
+>>>>>>> parent of 2521739... Make repo::nodesource::apt compatible with puppetlabs-apt 2.x only
           end
         end
 
@@ -147,8 +154,15 @@ describe 'nodejs', type: :class do
             default_params.merge!(repo_enable_src: false,)
           end
 
+<<<<<<< HEAD
           it 'the repo apt::source resource should contain include => { src => false}' do
             is_expected.to contain_apt__source('nodesource').with('include' => { 'src' => false, },)
+=======
+          it 'the repo apt::source resource should contain include_src = false' do
+            should contain_apt__source('nodesource').with({
+              'include_src' => false,
+            })
+>>>>>>> parent of 2521739... Make repo::nodesource::apt compatible with puppetlabs-apt 2.x only
           end
         end
 

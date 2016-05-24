@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ## 2016-05-08 Release 2.0.0
+=======
+##2015-05-20 1.0.0
+###Summary
+>>>>>>> parent of 2521739... Make repo::nodesource::apt compatible with puppetlabs-apt 2.x only
 
 ### Added
 

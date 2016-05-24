@@ -32,11 +32,19 @@ RSpec.configure do |c|
     hosts.each do |host|
       copy_module_to(host, source: proj_root, module_name: 'nodejs')
       shell("/bin/touch #{default['puppetpath']}/hiera.yaml")
+<<<<<<< HEAD
       on host, puppet('module install puppetlabs-apt --version 2.0.1'), acceptable_exit_codes: [0, 1]
       on host, puppet('module install gentoo-portage --version 2.0.1'), acceptable_exit_codes: [0, 1]
       on host, puppet('module install chocolatey-chocolatey --version 0.5.2'), acceptable_exit_codes: [0, 1]
       on host, puppet('module install stahnma-epel --version 1.0.0'), acceptable_exit_codes: [0, 1]
       on host, puppet('module install treydock-gpg_key --version 0.0.3'), acceptable_exit_codes: [0, 1]
+=======
+      on host, puppet('module install puppetlabs-apt --version 1.8.0'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module install gentoo-portage --version 2.0.1'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module install chocolatey-chocolatey --version 0.5.2'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module install stahnma-epel --version 1.0.0'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module install treydock-gpg_key --version 0.0.3'), { :acceptable_exit_codes => [0,1] }
+>>>>>>> parent of 2521739... Make repo::nodesource::apt compatible with puppetlabs-apt 2.x only
     end
   end
 end
