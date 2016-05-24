@@ -66,17 +66,9 @@
     }
   ],
   "dependencies": [
-<<<<<<< HEAD
-    {
-      "name": "puppetlabs/stdlib",
-      "version_requirement": ">=4.1.0 <5.0.0"
-    },
     {
       "name": "treydock/gpg_key",
       "version_requirement": ">=0.0.3 <1.0.0"
     }
-=======
-    {"name":"puppetlabs/stdlib","version_requirement":">=3.0.0 <5.0.0"}
->>>>>>> parent of 2521739... Make repo::nodesource::apt compatible with puppetlabs-apt 2.x only
   ]
 }
